@@ -1,0 +1,34 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+import seaborn as sns
+
+# Load the dataset
+df = pd.read_csv("fifa_world_cup_2026_player_performance.csv")
+
+# Display first 5 rows
+print("First 5 Rows:")
+print(df.head())
+
+# Display dataset information
+print("\nDataset Information:")
+print(df.info())
+
+# Display shape of the dataset
+print("\nShape of Dataset:")
+print(df.shape)
+
+# Display missing values
+print("\nMissing Values:")
+print(df.isnull().sum())
+
+# Display statistical summary
+print("\nStatistical Summary:")
+print(df.describe())
+
+# Remove duplicate rows
+df.drop_duplicates(inplace=True)
+
+# Fill missing values with 0
+df.fillna(0, inplace=True)
+
